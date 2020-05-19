@@ -5,12 +5,14 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "leon hunter",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^5.1.0",
+    "concurrently": "^5.2.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
